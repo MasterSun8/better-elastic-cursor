@@ -1,0 +1,16 @@
+*{
+    --circle-size: 5vw;
+    background-color: #010101;
+}
+
+.circle{
+    visibility: hidden;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border: calc(var(--circle-size)/5) solid pink;
+    border-radius: 100%;
+    top: calc(var(--circle-size)/-2);
+    left: calc(var(--circle-size)/-2);
+    pointer-events: none;
+}
