@@ -13,4 +13,5 @@ circle {
     top: calc(var(--circle-size)/-2);
     left: calc(var(--circle-size)/-2);
     pointer-events: none;
+    background-color: transparent;
 }
