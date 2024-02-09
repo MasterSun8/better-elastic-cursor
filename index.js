@@ -1,12 +1,10 @@
 const follower = document.getElementsByClassName('circle')[0]
 
-var z = .0005
+var z = .00025
 let mouse = { x: 0, y: 0 }
 let followerPosition = { x: 0, y: 0 }
 let dist = 0
 let first = true
-
-const max = Math.sqrt(window.width ** 2 + window.height ** 2)
 
 window.onload = function () {
     window.addEventListener('mousemove', (e) => {
@@ -34,7 +32,7 @@ function moveFollower() {
     let width = Math.abs(transformation.x / window.innerWidth)
     let height = Math.abs(transformation.y / window.innerHeight)
 
-    dist = Math.min(width + height * 10, .5)
+    dist = Math.min(Math.sqrt((width + height)/2), .75)
 
     follower.style.transform = `translate(${followerPosition.x}px, ${followerPosition.y}px)`
     follower.style.transform += `rotate(${Math.atan(transformation.x / transformation.y) * -180 / Math.PI}deg)`
