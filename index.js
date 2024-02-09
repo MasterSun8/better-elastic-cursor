@@ -1,4 +1,4 @@
-const follower = document.getElementsByClassName('circle')[0]
+const follower = document.createElement('circle') // gigachads dont use classes
 
 var z = .00025
 let mouse = { x: 0, y: 0 }
@@ -15,6 +15,7 @@ window.onload = function () {
             followerPosition.x = mouse.x
             followerPosition.y = mouse.y
             first = !first
+            document.body.appendChild(follower); 
         }
         moveFollower()
     })

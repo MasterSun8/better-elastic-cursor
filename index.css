@@ -1,9 +1,9 @@
-*{
+* {
     --circle-size: 2vw;
     background-color: #010101;
 }
 
-.circle{
+circle {
     visibility: hidden;
     position: fixed;
     height: var(--circle-size);
